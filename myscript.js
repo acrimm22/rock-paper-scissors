@@ -1,6 +1,11 @@
-//Return a value for the computer's choice
+//Return a value for the computer's choice variable:
+//Ask the computer to return either a 0, 1, or 2
+  //If the value = 0 the computer's choice is Paper
+  //If the value = 1 the computer's choice is Rock
+  //If the value = 2 the computer's choice is Scissors
 
-//Prompt the player to enter a value
+//Prompt the player to enter a value and return that into
+//the player's choice variable
 
 //Compare the computer's choice with the player's choice
 
@@ -38,6 +43,6 @@
   //If the player's count < computer, return "You LOSE the GAME! TRY AGAIN"
 
   //If the player's count = computer, return "It's a DRAW GAME! PLAY AGAIN"
-  
+
 
   
