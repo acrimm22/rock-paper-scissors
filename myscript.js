@@ -3,6 +3,11 @@
   //If the value = 0 the computer's choice is Paper
   //If the value = 1 the computer's choice is Rock
   //If the value = 2 the computer's choice is Scissors
+function getComputerChoice(max) {
+  return Math.floor(Math.random() * max);
+}
+
+
 
 //Prompt the player to enter a value and return that into
 //the player's choice variable
