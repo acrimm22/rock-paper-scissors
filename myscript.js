@@ -1,25 +1,30 @@
 //Return a value for the computer's choice variable:
 //Ask the computer to return either a 0, 1, or 2
-function getComputerChoice(max) {
-  number = Math.floor(Math.random() * max);
-  if (number === 0) {
-    return "Paper";
-  } else if (number === 1) {
-    return "Rock";
-  } else {
-    return "Scissors";
-  }
-}
-
-const playerSelection = "rock";
-const computerSelection = getComputerChoice(3);
-
   //If the value = 0 the computer's choice is Paper
   //If the value = 1 the computer's choice is Rock
   //If the value = 2 the computer's choice is Scissors
 
+function getComputerChoice(max) {
+  number = Math.floor(Math.random() * max);
+  if (number === 0) {
+    return "paper";
+  } else if (number === 1) {
+    return "rock";
+  } else {
+    return "scissors";
+  }
+}
+const computerSelection = getComputerChoice(3);
+
+
+
 //Prompt the player to enter a value and return that into
 //the player's choice variable
+
+const playerSelection = prompt("Type: Rock, Paper, or Scissors");
+const playerSelectionCaseSensitive = playerSelection.toLowerCase(playerSelection.trim());
+console.log(playerSelectionCaseSensitive);
+
 
 //Compare the computer's choice with the player's choice
 
