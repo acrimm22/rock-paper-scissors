@@ -14,6 +14,7 @@ function getComputerChoice(max) {
     return "scissors";
   }
 }
+
 const computerSelection = getComputerChoice(3);
 
 //Prompt the player to enter a value and return that into
@@ -86,6 +87,8 @@ if (computerSelection === "rock" && playerSelectionCaseSensitive === "paper") {
   //If the player's count < computer, return "You LOSE the GAME! TRY AGAIN"
 
   //If the player's count = computer, return "It's a DRAW GAME! PLAY AGAIN"
+
+//Variables:
 
 
   
