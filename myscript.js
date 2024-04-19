@@ -11,14 +11,14 @@ function getComputerChoice(max) {
 }
 
 //Round and Score Counters
-function increaseRoundCount(a) {
-  return roundCount = a + 1;
+function increaseRoundCount(roundCount) {
+  return roundCount = roundCount + 1;
 }
-function increaseComputerScore(a) {
-  return computerScore = a + 1;
+function increaseComputerScore(computerScore) {
+  return computerScore = computerScore + 1;
 }
-function increasePlayerScore(a) {
-  return playerScoreScore = a + 1;
+function increasePlayerScore(playerScore) {
+  return playerScore = playerScore + 1;
 }
 
 
@@ -50,7 +50,10 @@ let roundCount = 0;
 let playerScore = 0;
 let computerScore = 0;
 
-
+if (roundCount <= 6) {
+  playRound(computerSelection, playerSelectionCaseSensitive);
+  increaseRoundCount
+}
 
 
 
