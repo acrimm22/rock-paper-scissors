@@ -10,7 +10,40 @@ function getComputerChoice(max) {
   }
 }
 
-//Round and Score Counters
+function playRound(playerSelectionCaseSensitive, computerSelection) {
+  if (computerSelection === "rock" && playerSelectionCaseSensitive === "paper") {
+    return "Paper beats Rock, you WIN!";
+    
+    } else if (computerSelection === "rock" && playerSelectionCaseSensitive === "scissors") {
+      return "Rock beats Scissors, you LOSE!";
+      
+    } else if (computerSelection === "paper" && playerSelectionCaseSensitive === "rock") {
+      return "Paper beats Rock, you LOSE!";
+      
+    } else if (computerSelection === "paper" && playerSelectionCaseSensitive === "scissors") {
+      return "Paper beats Scissors, you WIN!";
+      
+    } else if (computerSelection === "scissors" && playerSelectionCaseSensitive === "rock") {
+      return "Rock beats Scissors, you WIN!";
+      
+    } else if (computerSelection === "scissors" && playerSelectionCaseSensitive === "paper") {
+      return "Scissors beats Paper, you LOSE!";
+      
+    } else {
+      return "TIE";
+  }
+
+}
+
+//variables
+const computerSelection = getComputerChoice(3);
+
+const playerSelection = prompt("Type: Rock, Paper, or Scissors");
+const playerSelectionCaseSensitive = playerSelection.toLowerCase(playerSelection.trim());
+
+
+
+/Round and Score Counters
 function increaseRoundCount(roundCount) {
   return roundCount = roundCount + 1;
 }
@@ -20,43 +53,6 @@ function increaseComputerScore(computerScore) {
 function increasePlayerScore(playerScore) {
   return playerScore = playerScore + 1;
 }
-
-
-function playRound(computerSelection, playerSelectionCaseSensitive) {
-  if (computerSelection === "rock" && playerSelectionCaseSensitive === "paper") {
-    alert ("Paper beats Rock, you WIN!");
-    } else if (computerSelection === "rock" && playerSelectionCaseSensitive === "scissors") {
-      alert ("Rock beats Scissors, you LOSE!");
-    } else if (computerSelection === "paper" && playerSelectionCaseSensitive === "rock") {
-      alert ("Paper beats Rock, you LOSE!");
-    } else if (computerSelection === "paper" && playerSelectionCaseSensitive === "scissors") {
-      alert ("Scissors beats Paper, you WIN!");
-    } else if (computerSelection === "scissors" && playerSelectionCaseSensitive === "rock") {
-      alert ("Rock beats Scissors, you WIN!");
-    } else if (computerSelection === "scissors" && playerSelectionCaseSensitive === "paper") {
-      alert ("Scissors beats Paper, you LOSE!");
-    } else {
-      alert ("TIE");
-  }
-}
-
-//variables
-const computerSelection = getComputerChoice(3);
-
-const playerSelection = prompt("Type: Rock, Paper, or Scissors");
-const playerSelectionCaseSensitive = playerSelection.toLowerCase(playerSelection.trim());
-
-let roundCount = 0;
-let playerScore = 0;
-let computerScore = 0;
-
-if (roundCount <= 6) {
-  playRound(computerSelection, playerSelectionCaseSensitive);
-  increaseRoundCount
-}
-
-
-
 
 
   
