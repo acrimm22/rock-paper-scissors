@@ -41,18 +41,7 @@ const computerSelection = getComputerChoice(3);
 const playerSelection = prompt("Type: Rock, Paper, or Scissors");
 const playerSelectionCaseSensitive = playerSelection.toLowerCase(playerSelection.trim());
 
-
-
-/Round and Score Counters
-function increaseRoundCount(roundCount) {
-  return roundCount = roundCount + 1;
-}
-function increaseComputerScore(computerScore) {
-  return computerScore = computerScore + 1;
-}
-function increasePlayerScore(playerScore) {
-  return playerScore = playerScore + 1;
-}
+console.log(playRound(playerSelectionCaseSensitive, computerSelection));
 
 
   

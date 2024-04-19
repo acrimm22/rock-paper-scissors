@@ -7,9 +7,10 @@
   //Prompt the player to enter a value and return that into
 //the player's choice variable
 
-
-//Compare the computer's choice with the player's choice
 //Start the round counter for 5 rounds
+//Start a counter for the computer score and the player score
+//Compare the computer's choice with the player's choice
+
 
   //If the computer picks rock and the player picks paper
   //the player wins; increase player count by 1 and game count by 1
