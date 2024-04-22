@@ -1,13 +1,9 @@
-//Function that plays the game 5 times
+//Function that contains the materials to play the game
 function playGame() {
-  //Variables for Scoring
+  //Variables for Scoring and counting rounds
   let humanScore = 0;
   let computerScore = 0;
   let roundCounter = 0;
-
-  //variables for choosing values to compare
-  let computerSelection = getComputerChoice();
-  let humanSelection = getHumanChoice();
 
   //Function for the computer to choose rock, paper, or scissors
   function getComputerChoice(max) {
@@ -28,7 +24,10 @@ function playGame() {
     return choice;
   }
 
+  //Loops the round 5 times while also asking for new inputs for choices
   while (roundCounter < 5) {
+    let computerSelection = getComputerChoice();
+    let humanSelection = getHumanChoice();
     playRound(humanSelection, computerSelection);
     roundCounter++;
   }
@@ -65,6 +64,17 @@ function playGame() {
           return;
     }
   }
+  //Compares the scores and displays who won to the console and the scores
+  if (humanScore > computerScore) {
+    console.log(`You WON ${humanScore} to ${computerScore}. Nice RPS skills!`);
+    return;
+  } else if (computerScore > humanScore) {
+    console.log(`You LOST ${humanScore} to ${computerScore}. Better luck next time.`);
+    return;
+  } else {
+    console.log(`TIE GAME: ${humanScore} to ${computerScore}. Try Again.`);
+    return;
+  }
 }
-
+//Initializes the gameplay
 playGame();
