@@ -3,7 +3,7 @@ function playGame() {
   //Variables for Scoring and counting rounds
   let humanScore = 0;
   let computerScore = 0;
-  let roundCounter = 0;
+  //let roundCounter = 0;
 
   //Function for the computer to choose rock, paper, or scissors
   function getComputerChoice(max) {
@@ -25,12 +25,12 @@ function playGame() {
   }
 
   //Loops the round 5 times while also asking for new inputs for choices
-  while (roundCounter < 5) {
+  //while (roundCounter < 5) {
     let computerSelection = getComputerChoice();
     let humanSelection = getHumanChoice();
     playRound(humanSelection, computerSelection);
-    roundCounter++;
-  }
+   // roundCounter++;
+  //}
 
   //Function to play one round of rock, paper, scissors; increases the score and counts the game
   function playRound(playerChoice, computerChoice) {
