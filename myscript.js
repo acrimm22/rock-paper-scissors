@@ -20,8 +20,18 @@ function playGame() {
 
   //Function for the user to imput rock, paper, or scissors
   function getHumanChoice(){
-    let choice = prompt("Type: Rock, Paper, or Scissors").toLowerCase();
-    return choice;
+    const rockBtn = document.querySelector('#rock');
+      rockBtn.addEventListener("click", () => {
+        return "rock";
+      });
+    const paperBtn = document.querySelector('#paper');
+      paperBtn.addEventListener("click", () => {
+        return "paper";
+      });
+    const scissorsBtn = document.querySelector('#scissors');
+      scissorsBtn.addEventListener("click", () => {
+        return "scissors";
+      });
   }
 
   //Loops the round 5 times while also asking for new inputs for choices
